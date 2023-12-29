@@ -23,3 +23,8 @@ export const SignUpValidationSchema = Yup.object().shape({
     .label('Confirm Password')
     .oneOf([Yup.ref('password')], 'Passwords do not match'),
 });
+export const FogotPassworSchema = Yup.object().shape({
+  email: Yup.string()
+    .email('*Please Enter Correct Email')
+    .required('Email is required'),
+});

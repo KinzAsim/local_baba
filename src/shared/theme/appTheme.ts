@@ -14,7 +14,8 @@ export const ASPECT_DIFF = ASPECT_RATIO / BASE_ASPECT_RATIO;
 // ....................Global-Colors........................
 
 export const mixGray = '#595959';
-
+export const primary = '#FE4101';
+export const textColor3 = '#DDDDDD';
 // ....................UseTheme........................
 
 export const darkThemeStyle = {
@@ -27,6 +28,7 @@ export const darkThemeStyle = {
   gray: '#808080',
   textColor: '#434343',
   textColor2: '#949494',
+  textColor3: '#DDDDDD',
   mixGray: '#595959',
   dimGray: '#7E8A97',
   lightGray: '#A0A5BA',
@@ -45,6 +47,7 @@ export const defaultTheme = {
     gray: '#808080',
     textColor: '#434343',
     textColor2: '#949494',
+    textColor3: '#DDDDDD',
     mixGray: '#595959',
     dimGray: '#7E8A97',
     lightGray: '#A0A5BA',

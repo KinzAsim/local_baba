@@ -39,6 +39,7 @@ interface Props {
   activeColor?: any;
   activeTextColor?: any;
   inactiveTextColor?: any;
+  justifyStyle?: any;
   handlePress: (titleResponse: any) => void;
 }
 
@@ -69,6 +70,7 @@ const CustomButton = (props: Partial<Props>) => {
     selected,
     activeTextColor,
     inactiveTextColor,
+    justifyStyle,
     handlePress,
     ...textInputProps
   } = props;
@@ -82,11 +84,14 @@ const CustomButton = (props: Partial<Props>) => {
   );
   return (
     <View
-      style={{
-        flexDirection: numberOfButtons ? 'row' : 'column',
-        alignItems: 'center',
-        justifyContent: justifyContent ? justifyContent : 'center',
-      }}>
+      style={[
+        justifyStyle,
+        {
+          flexDirection: numberOfButtons ? 'row' : 'column',
+          alignItems: 'center',
+          justifyContent: justifyContent ? justifyContent : 'space-between',
+        },
+      ]}>
       <Pressable
         onPress={!numberOfButtons ? handlePress : () => handlePress?.(title)}
         style={[
@@ -146,7 +151,20 @@ const CustomButton = (props: Partial<Props>) => {
           {Icon2 && (
             <Image style={[styles.leftImg, iconStyle]} source={Icon2} />
           )}
-          <Text style={[textStyle]}>{title2 ? title2 : 'Button2'}</Text>
+          <Text
+            style={[
+              textStyle,
+              {
+                color:
+                  selected == title2
+                    ? activeTextColor
+                    : !numberOfButtons
+                    ? '#ffff'
+                    : inactiveTextColor,
+              },
+            ]}>
+            {title2 ? title2 : 'Button2'}
+          </Text>
           {rightIcon && (
             <Image style={[styles.rightImg, iconStyle]} source={rightIcon} />
           )}

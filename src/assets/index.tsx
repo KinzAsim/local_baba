@@ -14,17 +14,29 @@ const google = require('././icons/google.png');
 const checkbox = require('././icons/checkbox.png');
 const eyeHidden = require('././icons/eyeHidden.png');
 const eyeVisible = require('././icons/eyeVisible.png');
+const whiteEmail = require('././icons/whiteEmail.png');
+
 const apple = require('././icons/apple.png');
 const email = require('././icons/email.png');
 const close = require('././icons/close.png');
 
-const home = require('./Home.png');
+// .....................TABS...................
+const food = require('././tabs/food.png');
+const grocery = require('././tabs/grocery.png');
+const allService = require('././tabs/allService.png');
+const snoosend = require('././tabs/snoosend.png');
+const profile = require('././tabs/profile.png');
 
 export {
+  profile,
+  allService,
+  snoosend,
+  whiteEmail,
+  grocery,
   apple,
   email,
   close,
-  home,
+  food,
   checkInbox,
   appLogo,
   appLogo2,
